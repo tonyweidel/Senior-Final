@@ -7,7 +7,12 @@ function PasswordMessage(m){
 
 function inRange(char,min,max){
     let unicode = char.charCodeAt(0);
-    
+    if(unicode>=min && unicode<=max){
+      return true;
+    }
+    else{
+      return false;
+    }
 }
 
 exports.checkLength = function(str){
@@ -31,20 +36,81 @@ exports.checkLength = function(str){
 
 
 exports.containsUpper =function(str){
-
+  let hasUpper = false;
+  try{
+    for(let m=0; m<string.length; m++){
+      if(inRange(str[m],65,90)==true){
+        hasUpper=true;
+      }
+    }
+    if(hasUpper = true){
+    throw new PasswordMessage("Password contains at least one uppercase letter");
+    }
+    else{
+      throw new PasswordMessage("Password must contain at least one uppercase letter");
+    }
+  }
+  catch(e){
+    console.log(e.name+": "+e.message);
+  }
 }
-
 
 exports.containsLower =function(str){
-
+  let hasUpper = false;
+  try{
+    for(let m=0; m<string.length; m++){
+      if(inRange(str[m],65,90)==true){
+        hasUpper=true;
+      }
+    }
+    if(hasUpper = true){
+    throw new PasswordMessage("Password contains at least one uppercase letter");
+    }
+    else{
+      throw new PasswordMessage("Password must contain at least one uppercase letter");
+    }
+  }
+  catch(e){
+    console.log(e.name+": "+e.message);
+  }
 }
-
 
 exports.containsNumerical =function(str){
-
+  let hasUpper = false;
+  try{
+    for(let m=0; m<string.length; m++){
+      if(inRange(str[m],65,90)==true){
+        hasUpper=true;
+      }
+    }
+    if(hasUpper = true){
+    throw new PasswordMessage("Password contains at least one uppercase letter");
+    }
+    else{
+      throw new PasswordMessage("Password must contain at least one uppercase letter");
+    }
+  }
+  catch(e){
+    console.log(e.name+": "+e.message);
+  }
 }
 
-
 exports.containsSpecial =function(str){
-
+  let hasUpper = false;
+  try{
+    for(let m=0; m<string.length; m++){
+      if(inRange(str[m],65,90)==true){
+        hasUpper=true;
+      }
+    }
+    if(hasUpper = true){
+    throw new PasswordMessage("Password contains at least one uppercase letter");
+    }
+    else{
+      throw new PasswordMessage("Password must contain at least one uppercase letter");
+    }
+  }
+  catch(e){
+    console.log(e.name+": "+e.message);
+  }
 }
