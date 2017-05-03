@@ -56,18 +56,18 @@ exports.containsUpper =function(str){
 }
 
 exports.containsLower =function(str){
-  let hasUpper = false;
+  let hasLower = false;
   try{
     for(let m=0; m<string.length; m++){
-      if(inRange(str[m],65,90)==true){
-        hasUpper=true;
+      if(inRange(str[m],97,122)==true){
+        hasLower=true;
       }
     }
-    if(hasUpper = true){
-    throw new PasswordMessage("Password contains at least one uppercase letter");
+    if(hasLower = true){
+    throw new PasswordMessage("Password contains at least one lowercase letter");
     }
     else{
-      throw new PasswordMessage("Password must contain at least one uppercase letter");
+      throw new PasswordMessage("Password must contain at least one lowercase letter");
     }
   }
   catch(e){
@@ -76,18 +76,18 @@ exports.containsLower =function(str){
 }
 
 exports.containsNumerical =function(str){
-  let hasUpper = false;
+  let hasNumber = false;
   try{
     for(let m=0; m<string.length; m++){
-      if(inRange(str[m],65,90)==true){
-        hasUpper=true;
+      if(inRange(str[m],48,57)==true){
+        hasNumber=true;
       }
     }
-    if(hasUpper = true){
-    throw new PasswordMessage("Password contains at least one uppercase letter");
+    if(hasNumber = true){
+    throw new PasswordMessage("Password contains at least one number");
     }
     else{
-      throw new PasswordMessage("Password must contain at least one uppercase letter");
+      throw new PasswordMessage("Password must contain at least one number");
     }
   }
   catch(e){
@@ -96,7 +96,7 @@ exports.containsNumerical =function(str){
 }
 
 exports.containsSpecial =function(str){
-  let hasUpper = false;
+  let hasSpecial = false;
   try{
     for(let m=0; m<string.length; m++){
       if(inRange(str[m],65,90)==true){

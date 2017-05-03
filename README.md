@@ -53,7 +53,7 @@ This function is an object constructor outside of a class; you SHOULD NOT use th
 
 #### contains special
 -  This function should declare a variable, hasSpecial and initialize it to false;
--  Declare an array special = [33,64,35,36,37,94,38,42]
+-  Declare an array special = [33,35,36,37,38,42,64,94]
 -  Loop through the special list, throwing and returning the correct values.
 
 ## passwordGUI
