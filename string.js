@@ -38,7 +38,7 @@ exports.checkLength = function(str){
 exports.containsUpper =function(str){
   let hasUpper = false;
   try{
-    for(let m=0; m<string.length; m++){
+    for(let m=0; m<str.length; m++){
       if(inRange(str[m],65,90)==true){
         hasUpper=true;
       }
@@ -58,7 +58,7 @@ exports.containsUpper =function(str){
 exports.containsLower =function(str){
   let hasLower = false;
   try{
-    for(let m=0; m<string.length; m++){
+    for(let m=0; m<str.length; m++){
       if(inRange(str[m],97,122)==true){
         hasLower=true;
       }
@@ -78,7 +78,7 @@ exports.containsLower =function(str){
 exports.containsNumerical =function(str){
   let hasNumber = false;
   try{
-    for(let m=0; m<string.length; m++){
+    for(let m=0; m<str.length; m++){
       if(inRange(str[m],48,57)==true){
         hasNumber=true;
       }
@@ -100,14 +100,14 @@ exports.containsSpecial =function(str){
   special = [33,35,36,37,38,42,64,94];
   try{
     for(let s=0; s<special.length; s++){
-      for(let m=0; m<string.length; m++){
-        if(str[m]==special[s]){
+      for(let m=0; m<str.length; m++){
+        if(str[m].charCodeAt(0)==special[s]){
           hasSpecial = true;
           throw new PasswordMessage("Password contains at least one special character");
         }
       }
     }
-    if(hasSpecial = false){
+    if(hasSpecial == false){
       throw new PasswordMessage("Password must contain at least one special character");
     }
   }
